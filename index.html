@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="text-center">
+    <h1>Free Dictionary Api</h1>
+
+    <p>Get any English word defination</p>
+    <div
+      class="card container text-center justify-content-center align-items-center"
+      style="width: 18rem"
+    >
+      <div class="row justify-content-center align-items-center">
+        <div class="col">
+          <img src="./images/banner.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h2 class="card-title">Word Dictionary</h2>
+            <form action="#">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"
+                  >Enter a word</span
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="..."
+                  aria-label="Username"
+                  id="userInput"
+                />
+              </div>
+            </form>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              onclick="getDefination()"
+            >
+              Get defination
+            </button>
+            <button
+              type="submit"
+              class="btn btn-outline-success"
+              onclick="clearInput()"
+            >
+              Clear
+            </button>
+            <p id="output" class="text-muted">---output here---</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
