@@ -4,7 +4,6 @@ const apiUrl = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 
 var displayText = document.querySelector("#output");
 var userInput = document.querySelector("#userInput");
-console.log(displayText);
 
 const person = {
   name: "Chris",
@@ -52,3 +51,36 @@ window.addEventListener("keypress", (e) => {
     getDefination();
   }
 });
+
+var userFieldDataName = document.querySelectorAll(".name");
+var userFieldDataEmail = document.querySelectorAll(".email");
+var userFieldDataGender = document.querySelectorAll(".gender");
+var userFieldDataPhoneNum = document.querySelectorAll(".phoneNum");
+
+async function getRandomUser() {
+  const randomUserNum = Math.floor(Math.random() * 100);
+  const module = await import("./randomuser.json", { with: { type: "json" } });
+
+  console.log(module);
+
+  const data = module.default;
+  console.log(data[randomUserNum]);
+
+  console.log("kajskdjfaskj");
+
+  userFieldDataName.forEach((user) => {
+    user.innerText = data[randomUserNum].first_name;
+  });
+
+  userFieldDataEmail.forEach((user) => {
+    user.innerText = data[randomUserNum].email;
+  });
+
+  userFieldDataGender.forEach((user) => {
+    user.innerText = data[randomUserNum].gender;
+  });
+
+  userFieldDataPhoneNum.forEach((user) => {
+    user.innerText = data[randomUserNum].phone_number;
+  });
+}
